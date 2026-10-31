@@ -3,150 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نکسرا (Nexra) | هوشمندترین مرجع قالب و افزونه</title>
-    <!-- فونت وزیرمتن و آیکون‌ها -->
+    <title>نکسرا (Nexra) | مارکت‌پلیس قالب و اسکریپت حرفه‌ای</title>
+    <!-- فونت وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <!-- آیکون‌های FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- نوار تخفیف بالا -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="promo-text">
-                <span class="badge-fire">🔥 ویژه</span>
-                <span>۵۰٪ تخفیف روی محبوب‌ترین محصولات</span>
+    <!-- نوار جشنواره بالا -->
+    <div class="top-promo">
+        <div class="container promo-flex">
+            <div class="promo-right">
+                <span class="pulse-dot"></span>
+                <span>جشنواره فروش ویژه نکسرا: <strong>۵۰٪ تخفیف</strong> روی تمام قالب‌ها و اسکریپت‌ها!</span>
             </div>
-            <div class="countdown" id="countdown">
-                <span id="days">۰۰</span> :
-                <span id="hours">۱۳</span> :
-                <span id="minutes">۲۵</span> :
-                <span id="seconds">۲۹</span>
+            <div class="promo-timer" id="countdown">
+                <div class="time-box"><span id="seconds">۲۹</span><small>ثانیه</small></div>
+                <span class="colon">:</span>
+                <div class="time-box"><span id="minutes">۳۵</span><small>دقیقه</small></div>
+                <span class="colon">:</span>
+                <div class="time-box"><span id="hours">۱۳</span><small>ساعت</small></div>
             </div>
         </div>
     </div>
 
     <!-- هدر اصلی -->
-    <header class="main-header">
-        <div class="container header-content">
+    <header class="navbar">
+        <div class="container nav-container">
             <!-- دکمه منوی موبایل -->
-            <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منو">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- لوگو و منو -->
-            <div class="right-nav">
-                <a href="#" class="logo-link">
-                    <img src="logo.png" alt="Nexra Logo" class="logo-img">
-                </a>
-                <nav class="nav-links" id="navLinks">
-                    <a href="#" class="active">فروشگاه قالب وردپرس</a>
-                    <a href="#">افزونه وردپرس</a>
-                    <a href="#">قالب HTML</a>
-                    <a href="#">اسکریپت</a>
-                </nav>
-            </div>
+            <!-- لوگو (logo.png) -->
+            <a href="#" class="brand-logo">
+                <img src="logo.png" alt="Nexra" onerror="this.style.display='none'">
+                <span class="brand-text">NEXRA</span>
+            </a>
 
-            <!-- دکمه‌های ورود و اشتراک -->
-            <div class="left-actions">
-                <a href="#" class="btn-pro">
-                    <i class="fas fa-crown"></i>
-                    <span>خرید اشتراک پرو</span>
+            <!-- لینک‌های منو -->
+            <nav class="nav-menu" id="navMenu">
+                <div class="mobile-menu-header">
+                    <span class="brand-text">NEXRA</span>
+                    <button class="close-menu-btn" id="closeMenuBtn"><i class="fas fa-times"></i></button>
+                </div>
+                <a href="#products" class="nav-item active"><i class="fab fa-wordpress"></i> قالب وردپرس</a>
+                <a href="#products" class="nav-item"><i class="fas fa-plug"></i> افزونه وردپرس</a>
+                <a href="#products" class="nav-item"><i class="fab fa-html5"></i> قالب HTML</a>
+                <a href="#products" class="nav-item"><i class="fas fa-code"></i> اسکریپت آماده</a>
+            </nav>
+
+            <!-- اکشن‌های سمت چپ -->
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" title="سبد خرید">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">۰</span>
+                </button>
+                <a href="#pro" class="btn-vip">
+                    <i class="fas fa-bolt"></i>
+                    <span>اشتراک پرو</span>
                 </a>
-                <a href="#" class="btn-auth">
+                <a href="#login" class="btn-login">
                     <i class="far fa-user"></i>
-                    <span>ورود | ثبت نام</span>
+                    <span>ورود / عضویت</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- بخش هیرو (بنر اصلی) -->
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-glass-box">
-                <h1>نکسرا، راهکار سریع و <span class="highlight">هوشمند</span> ساخت سایت</h1>
-                <p class="hero-subtitle">بزرگترین فروشگاه قالب وردپرس، قالب HTML و افزونه در ایران</p>
+    <!-- بخش هیرو (دو ستونه بدون تداخل متن و عکس) -->
+    <section class="hero">
+        <div class="glow-circle glow-1"></div>
+        <div class="glow-circle glow-2"></div>
 
-                <!-- باکس جستجو -->
-                <form class="search-form" onsubmit="event.preventDefault();">
-                    <input type="text" placeholder="نام قالب یا افزونه مثلاً: انفولد، المنتور..." class="search-input">
-                    <button type="submit" class="search-btn">
-                        <i class="fas fa-search"></i>
-                        <span>جستجو</span>
-                    </button>
-                </form>
-
-                <!-- تگ‌های محبوب -->
-                <div class="popular-searches">
-                    <span class="tags-title">جستجوهای پرتکرار:</span>
-                    <div class="tags-list">
-                        <a href="#" class="tag">قالب فروشگاهی</a>
-                        <a href="#" class="tag">هوش مصنوعی</a>
-                        <a href="#" class="tag">قالب المنتوری</a>
-                        <a href="#" class="tag">قالب شرکتی</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش ویژگی‌ها و محصولات نمونه برای جذابیت بیشتر -->
-    <section class="features-section container">
-        <div class="section-header">
-            <h2>جدیدترین قالب‌های ویژه <span class="text-green">نکسرا</span></h2>
-            <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
-        </div>
-
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="card-badge">پرفروش</div>
-                <div class="card-thumb thumb-1">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="card-body">
-                    <h3>قالب فروشگاهی نکس‌شاپ</h3>
-                    <p>سازگار با ووکامرس و المنتور</p>
-                    <div class="card-footer">
-                        <span class="sales"><i class="fas fa-shopping-bag"></i> ۱,۲۴۰ فروش</span>
-                        <span class="price">۶۹۰,۰۰۰ تومان</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-badge badge-purple">هوش مصنوعی</div>
-                <div class="card-thumb thumb-2">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="card-body">
-                    <h3>قالب استارتاپی آی‌تک (AI Tech)</h3>
-                    <p>طراحی مدرن دارک و لایت مود</p>
-                    <div class="card-footer">
-                        <span class="sales"><i class="fas fa-shopping-bag"></i> ۸۵۰ فروش</span>
-                        <span class="price">۵۵۰,۰۰۰ تومان</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-thumb thumb-3">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <div class="card-body">
-                    <h3>افزونه بهینه‌ساز سرعت توربو</h3>
-                    <p>افزایش امتیاز GTmetrix تا ۱۰۰٪</p>
-                    <div class="card-footer">
-                        <span class="sales"><i class="fas fa-shopping-bag"></i> ۲,۱۰۰ فروش</span>
-                        <span class="price">۳۹۰,۰۰۰ تومان</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="container hero-grid">
+            <!-- ستون راست: محتوا و جستجو -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles

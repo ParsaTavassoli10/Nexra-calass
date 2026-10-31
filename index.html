@@ -8,87 +8,95 @@
     <!-- لینک به فایل CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- فونت فارسی وزیرمتن (اصلاح شده) -->
+    <!-- فونت فارسی وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
     <!-- نوار بالای سایت (تخفیف و تایمر) -->
-    <div class="top-bar">
-        <div class="timer-box">
+    <div class="top-bar" style="background-color: #2c3e50; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; font-size: 14px;">
+        <div class="timer-box" style="background: #fff; color: #333; padding: 2px 10px; border-radius: 5px; direction: ltr; font-weight: bold;">
             <span id="days">۰۰</span> : <span id="hours">۱۳</span> : <span id="minutes">۳۵</span> : <span id="seconds">۴۳</span>
         </div>
         <div class="top-bar-text">۵۰٪ تخفیف روی محبوب‌ترین محصولات</div>
     </div>
 
-    <!-- هدر اصلی سایت -->
-    <header class="main-header">
-        <div class="header-right">
-            <!-- لوگوی سایت (مسیر اصلاح شد تا مستقیماً از فایل logo.png در گیت‌هاب خوانده شود) -->
-            <img src="logo.png" alt="لوگو راست چین" class="logo">
+    <!-- هدر اصلی سایت (منو و لوگو) -->
+    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; z-index: 10;">
+        <div class="header-right" style="display: flex; align-items: center; gap: 30px;">
+            <!-- لوگوی سایت -->
+            <a href="#" class="logo">
+                <img src="logo.png" alt="لوگو راست چین" style="height: 40px; width: auto;">
+            </a>
             
-            <nav class="main-nav">
-                <a href="#">فروشگاه قالب وردپرس</a>
-                <a href="#">افزونه وردپرس</a>
-                <a href="#">قالب HTML</a>
-                <a href="#">اسکریپت</a>
+            <nav class="main-nav" style="display: flex; gap: 20px;">
+                <a href="#" style="text-decoration: none; color: #555; font-weight: 500;">فروشگاه قالب وردپرس</a>
+                <a href="#" style="text-decoration: none; color: #555; font-weight: 500;">افزونه وردپرس</a>
+                <a href="#" style="text-decoration: none; color: #555; font-weight: 500;">قالب HTML</a>
+                <a href="#" style="text-decoration: none; color: #555; font-weight: 500;">اسکریپت</a>
             </nav>
         </div>
-        <div class="header-left">
-            <a href="#" class="login-btn">ورود | ثبت نام</a>
-            <a href="#" class="pro-btn">خرید اشتراک پرو</a>
+        <div class="header-left" style="display: flex; gap: 15px; align-items: center;">
+            <a href="#" class="login-btn" style="text-decoration: none; border: 1px solid #ddd; padding: 8px 15px; border-radius: 5px; font-size: 14px; color: #333;">ورود | ثبت نام</a>
+            <a href="#" class="pro-btn" style="text-decoration: none; background-color: #e8f5e9; color: #2e7d32; padding: 8px 15px; border-radius: 5px; font-weight: bold; font-size: 14px;">خرید اشتراک پرو</a>
         </div>
     </header>
 
-    <!-- بخش هیرو (بنر اصلی با جستجو) -->
-    <img src="header.png" alt="هدر سایت " class="header">
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>راست چین، راهکار سریع و <span>هوشمند</span> ساخت سایت</h1>
-            <p>بزرگترین فروشگاه قالب وردپرس و افزونه در ایران</p>
+    <!-- ================= بخش جستجو (بالا) ================= -->
+    <section class="hero-section" style="background-color: #f8f9fa; padding: 60px 20px 40px; text-align: center;">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+            <h1 style="font-size: 32px; margin-bottom: 15px; color: #222;">راست چین، راهکار سریع و <span style="color: #4caf50;">هوشمند</span> ساخت سایت</h1>
+            <p style="color: #666; margin-bottom: 30px;">بزرگترین فروشگاه قالب وردپرس و افزونه در ایران</p>
             
-            <div class="search-container">
-                <input type="text" placeholder="نام قالب یا افزونه مثلا: انفولد">
-                <button>جستجو</button>
+            <div class="search-container" style="display: flex; max-width: 600px; margin: 0 auto 20px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                <input type="text" placeholder="نام قالب یا افزونه مثلا: انفولد" style="flex: 1; padding: 15px; border: none; outline: none; font-size: 16px; font-family: inherit;">
+                <button style="background-color: #8bc34a; color: white; border: none; padding: 0 30px; cursor: pointer; font-size: 16px; font-weight: bold; font-family: inherit;">جستجو</button>
             </div>
-            <div class="search-tags">
+            <div class="search-tags" style="font-size: 13px; color: #777;">
                 <span>جستجوهای پرتکرار:</span>
-                <a href="#">قالب فروشگاهی</a>
-                <a href="#">هوش مصنوعی</a>
-                <a href="#">قالب المنتوری</a>
+                <a href="#" style="margin-right: 10px; color: #555; text-decoration: none;">قالب فروشگاهی</a>
+                <a href="#" style="margin-right: 10px; color: #555; text-decoration: none;">هوش مصنوعی</a>
+                <a href="#" style="margin-right: 10px; color: #555; text-decoration: none;">قالب المنتوری</a>
             </div>
         </div>
     </section>
 
+    <!-- ================= بنر عکس شما (زیر جستجو) ================= -->
+    <!-- نام عکس خود را در اینجا وارد کنید (مثلاً header.jpg) -->
+    <section class="header-banner" style="width: 100%; text-align: center; background-color: #0b0f19;">
+        <img src="header.png" alt="Nexra Banner" style="width: 100%; height: auto; max-height: 500px; object-fit: cover; display: block; margin: 0 auto;">
+    </section>
+    <!-- ========================================================= -->
+
     <!-- بخش کارت‌های محصولات (اولین پست‌ها) -->
-    <section class="products-grid">
-        <!-- کارت ۱ (اولین پست) -->
-        <div class="card">
-            <h3>تضمین فروش ۲ ربرابری</h3>
-            <p>با انتقال محصول به راست چین</p>
+    <section class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 50px 5%;">
+        <!-- کارت ۱ -->
+        <div class="card" style="background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #222;">تضمین فروش ۲ ربرابری</h3>
+            <p style="font-size: 14px; color: #777;">با انتقال محصول به راست چین</p>
         </div>
         <!-- کارت ۲ -->
-        <div class="card">
-            <div class="card-icon" style="background: #1a4731;">۳۶۰</div>
-            <h3>احیای ۳۶۰ فروش اولین</h3>
-            <p>حتی با اینترنت محدود!</p>
+        <div class="card" style="background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="card-icon" style="background: #1a4731; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; font-weight: bold;">۳۶۰</div>
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #222;">احیای ۳۶۰ فروش اولین</h3>
+            <p style="font-size: 14px; color: #777;">حتی با اینترنت محدود!</p>
         </div>
         <!-- کارت ۳ -->
-        <div class="card">
-            <div class="card-icon" style="background: #e6b800;">X</div>
-            <h3>قالب اکسـتـرا</h3>
-            <p>محبوب‌ترین قالب چند منظوره ایران</p>
+        <div class="card" style="background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="card-icon" style="background: #e6b800; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; font-weight: bold;">X</div>
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #222;">قالب اکسـتـرا</h3>
+            <p style="font-size: 14px; color: #777;">محبوب‌ترین قالب چند منظوره ایران</p>
         </div>
         <!-- کارت ۴ -->
-        <div class="card">
-            <div class="card-icon" style="background: #4caf50;">Pro</div>
-            <h3>پروهاست</h3>
-            <p>هاست پیشرفته وردپرس</p>
+        <div class="card" style="background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="card-icon" style="background: #4caf50; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; font-weight: bold;">Pro</div>
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #222;">پروهاست</h3>
+            <p style="font-size: 14px; color: #777;">هاست پیشرفته وردپرس</p>
         </div>
     </section>
 
     <!-- فوتر ساده -->
-    <footer>
+    <footer style="text-align: center; padding: 20px; background: white; border-top: 1px solid #eee; margin-top: 20px; color: #666;">
         <p>تمامی حقوق برای این سایت محفوظ است. ساخته شده با ❤️</p>
     </footer>
 

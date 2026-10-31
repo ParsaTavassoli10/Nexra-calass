@@ -1,30 +1,43 @@
-// کدهای ساده برای تایمر بالای سایت
-// این کد یک تایمر 13 ساعت و 35 دقیقه و 43 ثانیه ای را شروع می‌کند
+// ۱. باز و بسته کردن منوی موبایل
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
 
-let hours = 13;
-let minutes = 35;
-let seconds = 43;
-
-function updateTimer() {
-    seconds--;
-    if (seconds < 0) {
-        seconds = 59;
-        minutes--;
-        if (minutes < 0) {
-            minutes = 59;
-            hours--;
-            if (hours < 0) {
-                hours = 23; // ریست کردن
-            }
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('show')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         }
-    }
-
-    // تبدیل به اعداد فارسی
-    const toPersianNum = (num) => String(num).padStart(2, '0').replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
-
-    document.getElementById('hours').innerText = toPersianNum(hours);
-    document.getElementById('minutes').innerText = toPersianNum(minutes);
-    document.getElementById('seconds').innerText = toPersianNum(seconds);
+    });
 }
 
-setInterval(updateTimer, 1000);
+// ۲. تبدیل اعداد انگلیسی به فارسی برای تایمر
+function toPersianDigits(num) {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return String(num).padStart(2, '0').replace(/\d/g, x => persianDigits[x]);
+}
+
+// ۳. تایمر شمارش معکوس زنده
+let totalSeconds = (13 * 3600) + (25 * 60) + 29; // ۱۳ ساعت و ۲۵ دقیقه و ۲۹ ثانیه
+
+function updateCountdown() {
+    if (totalSeconds <= 0) return;
+    totalSeconds--;
+
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    document.getElementById('days').textContent = toPersianDigits(days);
+    document.getElementById('hours').textContent = toPersianDigits(hours);
+    document.getElementById('minutes').textContent = toPersianDigits(minutes);
+    document.getElementById('seconds').textContent = toPersianDigits(seconds);
+}
+
+setInterval(updateCountdown, 1000);

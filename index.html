@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- استایل‌ها داخل همین فایل قرار گرفتند -->
     <style>
         :root {
             --bg-main: #060913;
@@ -230,7 +231,7 @@
             cursor: pointer;
         }
 
-        /* --- ۳. بخش هیرو و باکس سرچ با متن کم‌رنگ دقیق --- */
+        /* --- ۳. بخش هیرو و باکس سرچ --- */
         .hero {
             position: relative;
             background-image: url('header.png');
@@ -278,7 +279,6 @@
         .hero-inner h1 span { color: #34d399; }
         .hero-inner p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 26px; }
 
-        /* استایل دقیق باکس سرچ و متن کم‌رنگ مثال‌ها */
         .search-bar {
             display: flex;
             align-items: center;
@@ -305,7 +305,6 @@
             font-size: 0.95rem;
         }
 
-        /* استایل اختصاصی برای کم‌رنگ بودن متن راهنمای سرچ */
         .search-bar input::placeholder {
             color: rgba(203, 213, 225, 0.55);
             font-weight: 400;
@@ -327,9 +326,7 @@
             transition: 0.2s;
         }
 
-        .search-bar button:hover {
-            background: #34d399;
-        }
+        .search-bar button:hover { background: #34d399; }
 
         .popular-tags {
             display: flex;
@@ -512,7 +509,7 @@
         .buy-btn:hover { background: var(--accent); color: #060913; }
 
         /* ========================================================
-           ۶. بخش تبلیغاتی پایین صفحه (لینک و عکس صفحه https://mramlaki.ir/)
+           ۶. بخش تبلیغاتی پایین صفحه
            ======================================================== */
         .ads-section {
             padding: 45px 0 65px;
@@ -628,7 +625,6 @@
             transform: translateY(-3px);
         }
 
-        /* قاب تصویر و پیش‌نمایش زنده سایت mramlaki.ir */
         .ad-preview-card {
             display: block;
             background: #090d16;
@@ -682,19 +678,6 @@
             object-position: top;
         }
 
-        .preview-window iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 133.33%;
-            height: 133.33%;
-            transform: scale(0.75);
-            transform-origin: top left;
-            border: none;
-            pointer-events: none;
-            background: #fff;
-        }
-
         .click-layer {
             position: absolute;
             inset: 0;
@@ -705,5 +688,17 @@
             padding-bottom: 16px;
             z-index: 5;
         }
+        
+        /* واکنش‌گرایی (ریسپانسیو) */
+        @media (max-width: 992px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .ad-banner-box { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+        }
 
-      
+        @media (max-width: 576px) {
+            .features-grid { grid-template-columns: 1fr; }
+            .hero-inner { padding: 25px 15px; }
+            .hero-inner h1 { font-size: 1.5rem; }
+            .search-bar { flex-direction: colu

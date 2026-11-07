@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نکسرا (Nexra) | مارکت‌پلیس قالب و اسکریپت حرفه‌ای</title>
+    <title>نکسرا (Nexra) | مارکت‌پلیس قالب HTML و وردپرس</title>
+    <!-- فونت وزیرمتن و آیکون‌ها -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -16,7 +17,7 @@
             --accent: #10b981;
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.09);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
         * {
@@ -79,7 +80,7 @@
         }
 
         .timer-unit {
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.45);
             padding: 3px 9px;
             border-radius: 6px;
             font-weight: 800;
@@ -89,7 +90,7 @@
 
         /* --- ۲. هدر اصلی --- */
         .header {
-            background: rgba(15, 21, 38, 0.9);
+            background: rgba(15, 21, 38, 0.92);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
@@ -109,7 +110,7 @@
         .header-right {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 24px;
         }
 
         .logo-box img {
@@ -123,11 +124,11 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 22px;
+            gap: 20px;
         }
 
         .nav-links a {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: #cbd5e1;
             display: flex;
@@ -141,6 +142,11 @@
         .nav-links a:hover, .nav-links a.active {
             color: #fff;
             border-bottom-color: var(--accent);
+        }
+
+        .nav-links a.ad-nav-link {
+            color: #fbbf24;
+            font-weight: 700;
         }
 
         .header-left {
@@ -224,7 +230,7 @@
             cursor: pointer;
         }
 
-        /* --- ۳. بخش هیرو --- */
+        /* --- ۳. بخش هیرو و باکس سرچ با متن کم‌رنگ دقیق --- */
         .hero {
             position: relative;
             background-image: url('header.png');
@@ -244,16 +250,16 @@
         .hero-inner {
             position: relative;
             z-index: 2;
-            max-width: 760px;
+            max-width: 780px;
             margin: 0 auto;
-            background: rgba(19, 27, 49, 0.78);
+            background: rgba(19, 27, 49, 0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.16);
             border-radius: 24px;
             padding: 40px 35px;
             text-align: center;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
         }
 
         .hero-tag {
@@ -272,13 +278,21 @@
         .hero-inner h1 span { color: #34d399; }
         .hero-inner p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 26px; }
 
+        /* استایل دقیق باکس سرچ و متن کم‌رنگ مثال‌ها */
         .search-bar {
             display: flex;
-            background: #060913;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            align-items: center;
+            background: #080c1a;
+            border: 2px solid rgba(99, 102, 241, 0.35);
             border-radius: 14px;
             padding: 6px;
             margin-bottom: 18px;
+            transition: all 0.25s ease;
+        }
+
+        .search-bar:focus-within {
+            border-color: #34d399;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
         }
 
         .search-bar input {
@@ -286,23 +300,35 @@
             background: transparent;
             border: none;
             outline: none;
-            color: #fff;
-            padding: 10px 14px;
-            font-size: 0.92rem;
+            color: #ffffff;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+
+        /* استایل اختصاصی برای کم‌رنگ بودن متن راهنمای سرچ */
+        .search-bar input::placeholder {
+            color: rgba(203, 213, 225, 0.55);
+            font-weight: 400;
+            font-size: 0.9rem;
         }
 
         .search-bar button {
             background: var(--accent);
             color: #060913;
             border: none;
-            padding: 10px 24px;
+            padding: 12px 26px;
             border-radius: 10px;
             font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .search-bar button:hover {
+            background: #34d399;
         }
 
         .popular-tags {
@@ -319,7 +345,7 @@
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid var(--border);
             color: #e2e8f0;
-            padding: 3px 11px;
+            padding: 4px 12px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 0.78rem;
@@ -367,7 +393,7 @@
         .feature-box span { font-size: 0.76rem; color: var(--text-muted); }
 
         /* --- ۵. بخش محصولات --- */
-        .products { padding: 60px 0 30px; }
+        .products { padding: 55px 0 30px; }
 
         .section-head {
             display: flex;
@@ -486,51 +512,52 @@
         .buy-btn:hover { background: var(--accent); color: #060913; }
 
         /* ========================================================
-           ۶. بخش تبلیغات پایین صفحه (بنر بزرگ و عکس سایت mramlaki.ir)
+           ۶. بخش تبلیغاتی پایین صفحه (لینک و عکس صفحه https://mramlaki.ir/)
            ======================================================== */
         .ads-section {
-            padding: 40px 0 60px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.15);
-            margin-top: 30px;
+            padding: 45px 0 65px;
+            border-top: 2px dashed rgba(16, 185, 129, 0.3);
+            margin-top: 35px;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
         }
 
         .ads-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .ads-header h3 {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 900;
             color: #fbbf24;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .ads-tag {
-            background: rgba(239, 68, 68, 0.2);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            padding: 3px 12px;
+            background: #ef4444;
+            color: #fff;
+            padding: 4px 14px;
             border-radius: 8px;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             font-weight: 800;
         }
 
         .ad-banner-box {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 28px;
-            background: linear-gradient(135deg, #111827 0%, #1e1b4b 60%, #064e3b 100%);
+            gap: 30px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #064e3b 100%);
             border: 2px solid #10b981;
-            border-radius: 22px;
-            padding: 26px;
+            border-radius: 24px;
+            padding: 28px;
             align-items: center;
-            box-shadow: 0 20px 45px rgba(16, 185, 129, 0.18);
-            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
         }
 
         .ad-info {
@@ -546,40 +573,38 @@
             background: #fbbf24;
             color: #060913;
             font-weight: 900;
-            font-size: 0.78rem;
-            padding: 4px 12px;
+            font-size: 0.8rem;
+            padding: 4px 14px;
             border-radius: 20px;
             width: fit-content;
         }
 
         .ad-info h4 {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
             font-weight: 900;
             color: #fff;
             line-height: 1.4;
         }
 
-        .ad-info h4 span {
-            color: #34d399;
-        }
+        .ad-info h4 span { color: #34d399; }
 
         .ad-info p {
-            color: #cbd5e1;
-            font-size: 0.92rem;
+            color: #e2e8f0;
+            font-size: 0.94rem;
             line-height: 1.8;
         }
 
         .ad-link-url {
             direction: ltr;
             text-align: left;
-            background: rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.15);
-            padding: 8px 14px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            padding: 8px 16px;
             border-radius: 10px;
             font-family: monospace;
             color: #34d399;
-            font-size: 0.9rem;
-            display: inline-block;
+            font-size: 0.95rem;
+            font-weight: 700;
             width: fit-content;
         }
 
@@ -591,10 +616,10 @@
             background: #10b981;
             color: #060913;
             font-weight: 900;
-            font-size: 1rem;
+            font-size: 1.02rem;
             padding: 14px 28px;
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
             margin-top: 6px;
         }
 
@@ -603,61 +628,53 @@
             transform: translateY(-3px);
         }
 
-        /* کادر نمایش تصویر و پیش‌نمایش زنده صفحه mramlaki.ir */
+        /* قاب تصویر و پیش‌نمایش زنده سایت mramlaki.ir */
         .ad-preview-card {
             display: block;
             background: #090d16;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.25);
             border-radius: 16px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
         }
 
         .ad-preview-card:hover {
             border-color: #fbbf24;
+            transform: scale(1.01);
         }
 
         .preview-top-bar {
             background: #1e293b;
-            padding: 8px 14px;
+            padding: 9px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             direction: ltr;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.12);
         }
 
-        .preview-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .preview-dots i {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            display: inline-block;
-        }
+        .preview-dots { display: flex; gap: 6px; }
+        .preview-dots i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 
         .preview-address {
             background: #0f172a;
-            color: #38bdf8;
-            font-size: 0.78rem;
+            color: #34d399;
+            font-size: 0.8rem;
             padding: 3px 14px;
             border-radius: 6px;
             font-family: monospace;
+            font-weight: 700;
         }
 
         .preview-window {
             position: relative;
             width: 100%;
-            height: 270px;
+            height: 280px;
             background: #0f172a;
             overflow: hidden;
         }
 
-        /* تصویر اسکرین‌شات خودکار + آی‌فریم زنده سایت */
         .preview-window img {
             width: 100%;
             height: 100%;
@@ -674,14 +691,14 @@
             transform: scale(0.75);
             transform-origin: top left;
             border: none;
-            pointer-events: none; /* تا کلیک روی کادر مستقیم لینک را باز کند */
+            pointer-events: none;
             background: #fff;
         }
 
         .click-layer {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 50%, rgba(6, 9, 19, 0.9) 100%);
+            background: linear-gradient(180deg, transparent 45%, rgba(6, 9, 19, 0.92) 100%);
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -689,27 +706,4 @@
             z-index: 5;
         }
 
-        .click-layer span {
-            background: #fbbf24;
-            color: #060913;
-            font-weight: 900;
-            font-size: 0.85rem;
-            padding: 6px 18px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-        }
-
-        /* --- ۷. استایل پنجره‌های پاپ‌آپ (Modals) --- */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(6px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            padding: 20px;
-        }
-
-        .modal-overlay.
+      

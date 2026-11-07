@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نکسرا (Nexra) | مارکت‌پلیس قالب و اسکریپت حرفه‌ای</title>
-    <!-- فونت وزیرمتن و آیکون‌ها -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -27,9 +26,7 @@
             font-family: 'Vazirmatn', Tahoma, sans-serif;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             background-color: var(--bg-main);
@@ -38,17 +35,8 @@
             overflow-x: hidden;
         }
 
-        /* قفل کردن سایز تمام تصاویر برای جلوگیری از بهم‌ریختگی */
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.25s ease;
-        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
 
         .container {
             width: 100%;
@@ -124,12 +112,6 @@
             gap: 28px;
         }
 
-        /* قفل کردن دقیق سایز لوگو */
-        .logo-box {
-            display: flex;
-            align-items: center;
-        }
-
         .logo-box img {
             height: 40px !important;
             width: auto !important;
@@ -153,6 +135,7 @@
             gap: 6px;
             padding: 6px 4px;
             border-bottom: 2px solid transparent;
+            cursor: pointer;
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -179,7 +162,10 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
+            transition: 0.2s;
         }
+
+        .cart-btn:hover { border-color: var(--accent); }
 
         .cart-count {
             position: absolute;
@@ -208,16 +194,15 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
         }
 
-        .btn-pro:hover {
-            background: var(--accent);
-            color: #060913;
-        }
+        .btn-pro:hover { background: var(--accent); color: #060913; }
 
         .btn-auth {
             background: var(--primary);
             color: #fff;
+            border: none;
             padding: 8px 16px;
             border-radius: 10px;
             font-size: 0.85rem;
@@ -225,11 +210,10 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
         }
 
-        .btn-auth:hover {
-            background: #4f46e5;
-        }
+        .btn-auth:hover { background: #4f46e5; }
 
         .mobile-toggle {
             display: none;
@@ -243,7 +227,7 @@
             cursor: pointer;
         }
 
-        /* --- ۳. بخش هیرو (بنر اصلی با کادر شیشه‌ای تمیز) --- */
+        /* --- ۳. بخش هیرو --- */
         .hero {
             position: relative;
             background-image: url('header.png');
@@ -253,7 +237,6 @@
             border-bottom: 1px solid var(--border);
         }
 
-        /* لایه تیره روی عکس تا متن‌ها ۱۰۰٪ خوانا شوند */
         .hero::before {
             content: '';
             position: absolute;
@@ -295,17 +278,9 @@
             color: #fff;
         }
 
-        .hero-inner h1 span {
-            color: #34d399;
-        }
+        .hero-inner h1 span { color: #34d399; }
+        .hero-inner p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 26px; }
 
-        .hero-inner p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            margin-bottom: 26px;
-        }
-
-        /* باکس جستجو */
         .search-bar {
             display: flex;
             background: #060913;
@@ -339,10 +314,6 @@
             gap: 6px;
         }
 
-        .search-bar button:hover {
-            background: #34d399;
-        }
-
         .popular-tags {
             display: flex;
             justify-content: center;
@@ -363,10 +334,7 @@
             font-size: 0.78rem;
         }
 
-        .tag-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
+        .tag-btn:hover { background: var(--primary); border-color: var(--primary); }
 
         /* --- ۴. بخش ویژگی‌ها --- */
         .features {
@@ -404,20 +372,11 @@
             flex-shrink: 0;
         }
 
-        .feature-box h4 {
-            font-size: 0.9rem;
-            margin-bottom: 2px;
-        }
-
-        .feature-box span {
-            font-size: 0.76rem;
-            color: var(--text-muted);
-        }
+        .feature-box h4 { font-size: 0.9rem; margin-bottom: 2px; }
+        .feature-box span { font-size: 0.76rem; color: var(--text-muted); }
 
         /* --- ۵. بخش محصولات --- */
-        .products {
-            padding: 60px 0;
-        }
+        .products { padding: 60px 0 30px; }
 
         .section-head {
             display: flex;
@@ -428,20 +387,10 @@
             margin-bottom: 30px;
         }
 
-        .section-head h2 {
-            font-size: 1.5rem;
-            font-weight: 900;
-        }
+        .section-head h2 { font-size: 1.5rem; font-weight: 900; }
+        .section-head h2 span { color: #34d399; }
 
-        .section-head h2 span {
-            color: #34d399;
-        }
-
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; }
 
         .filter-btn {
             background: var(--bg-card);
@@ -487,11 +436,7 @@
             background: #1e293b;
         }
 
-        .card-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
         .card-badge {
             position: absolute;
@@ -508,9 +453,7 @@
         .card-badge.green { background: var(--accent); color: #060913; }
         .card-badge.purple { background: var(--primary); }
 
-        .card-body {
-            padding: 18px;
-        }
+        .card-body { padding: 18px; }
 
         .card-cat {
             display: flex;
@@ -521,16 +464,8 @@
             font-weight: 600;
         }
 
-        .card-cat .stars {
-            color: #fbbf24;
-        }
-
-        .card-title {
-            font-size: 1.02rem;
-            font-weight: 800;
-            margin-bottom: 14px;
-            line-height: 1.5;
-        }
+        .card-cat .stars { color: #fbbf24; }
+        .card-title { font-size: 1.02rem; font-weight: 800; margin-bottom: 14px; line-height: 1.5; }
 
         .card-footer {
             display: flex;
@@ -540,18 +475,8 @@
             border-top: 1px solid var(--border);
         }
 
-        .price-box .old {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .price-box .new {
-            font-size: 1.05rem;
-            font-weight: 900;
-            color: #34d399;
-        }
+        .price-box .old { display: block; font-size: 0.75rem; color: var(--text-muted); text-decoration: line-through; }
+        .price-box .new { font-size: 1.05rem; font-weight: 900; color: #34d399; }
 
         .buy-btn {
             background: var(--primary);
@@ -565,374 +490,228 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            transition: 0.2s;
         }
 
-        .buy-btn:hover {
+        .buy-btn:hover { background: var(--accent); color: #060913; }
+
+        /* --- ۶. بخش تبلیغاتی ویژه (بنر مستر املاکی) --- */
+        .promo-banner-section {
+            padding: 35px 0 50px;
+        }
+
+        .ad-showcase-card {
+            background: linear-gradient(135deg, #131b31 0%, #1e1b4b 55%, #064e3b 100%);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 24px;
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 32px;
+            align-items: center;
+            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ad-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .ad-content h3 {
+            font-size: 1.55rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .ad-content h3 span {
+            color: #34d399;
+        }
+
+        .ad-content p {
+            color: #cbd5e1;
+            font-size: 0.94rem;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+
+        .ad-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 24px;
+            font-size: 0.82rem;
+            color: #a5b4fc;
+        }
+
+        .ad-features span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 5px 12px;
+            border-radius: 10px;
+        }
+
+        .ad-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: var(--accent);
             color: #060913;
+            font-weight: 900;
+            font-size: 0.95rem;
+            padding: 13px 26px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+            transition: transform 0.25s ease, background 0.25s ease;
         }
 
-        /* --- ۶. فوتر --- */
-        .footer {
-            background: #03050a;
-            border-top: 1px solid var(--border);
-            padding: 40px 0 20px;
-            margin-top: 40px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
+        .ad-cta-btn:hover {
+            background: #34d399;
+            transform: translateY(-3px);
         }
 
-        /* --- ۷. ریسپانسیو موبایل و تبلت --- */
-        @media (max-width: 950px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .mobile-toggle {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                background: #0f1526;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 18px 24px;
-                gap: 14px;
-                border-bottom: 1px solid var(--border);
-                box-shadow: 0 20px 30px rgba(0,0,0,0.6);
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
+        /* قاب مرورگر برای نمایش عکس صفحه mramlaki.ir */
+        .browser-mockup {
+            background: #0b0f1d;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.65);
+            transition: transform 0.35s ease;
+            display: block;
         }
 
-        @media (max-width: 600px) {
-            .top-bar-inner {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .btn-pro span, .btn-auth span {
-                display: none;
-            }
-
-            .hero {
-                padding: 35px 0;
-            }
-
-            .hero-inner {
-                padding: 25px 18px;
-            }
-
-            .hero-inner h1 {
-                font-size: 1.45rem;
-            }
-
-            .search-bar {
-                flex-direction: column;
-                gap: 8px;
-                padding: 10px;
-            }
-
-            .search-bar button {
-                width: 100%;
-                justify-content: center;
-                padding: 11px;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- ۱. نوار جشنواره بالا -->
-    <div class="top-bar">
-        <div class="container top-bar-inner">
-            <div>
-                <span class="promo-badge">پیشنهاد ویژه</span>
-                <span>۵۰٪ تخفیف روی محبوب‌ترین قالب‌ها و افزونه‌های نکسرا!</span>
-            </div>
-            <div class="timer-box">
-                <span class="timer-unit" id="hours">۱۳</span> :
-                <span class="timer-unit" id="minutes">۳۵</span> :
-                <span class="timer-unit" id="seconds">۲۹</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ۲. هدر اصلی (با سایز لوگوی قفل شده) -->
-    <header class="header">
-        <div class="container header-inner">
-            <div class="header-right">
-                <button class="mobile-toggle" id="mobileToggle" aria-label="منو">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="#" class="logo-box">
-                    <img src="logo.png" alt="Nexra Logo" height="40">
-                </a>
-                <nav class="nav-links" id="navLinks">
-                    <a href="#products" class="active"><i class="fab fa-wordpress"></i> فروشگاه قالب وردپرس</a>
-                    <a href="#products"><i class="fas fa-plug"></i> افزونه وردپرس</a>
-                    <a href="#products"><i class="fab fa-html5"></i> قالب HTML</a>
-                    <a href="#products"><i class="fas fa-code"></i> اسکریپت</a>
-                </nav>
-            </div>
-
-            <div class="header-left">
-                <button class="cart-btn" title="سبد خرید">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count" id="cartCount">۰</span>
-                </button>
-                <a href="#" class="btn-pro">
-                    <i class="fas fa-crown"></i>
-                    <span>خرید اشتراک پرو</span>
-                </a>
-                <a href="#" class="btn-auth">
-                    <i class="far fa-user"></i>
-                    <span>ورود | ثبت نام</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- ۳. بخش بنر اصلی (Hero) -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <span class="hero-tag"><i class="fas fa-bolt"></i> مارکت‌پلیس هوشمند نکسرا</span>
-                <h1>نکسرا، راهکار سریع و <span>هوشمند</span> ساخت سایت</h1>
-                <p>بزرگترین مرجع تخصصی قالب وردپرس، قالب HTML و افزونه‌های اورجینال در ایران</p>
-
-                <form class="search-bar" id="searchForm">
-                    <input type="text" id="searchInput" placeholder="نام قالب یا افزونه مثلاً: انفولد، فروشگاهی، المنتور...">
-                    <button type="submit">
-                        <i class="fas fa-search"></i>
-                        <span>جستجو</span>
-                    </button>
-                </form>
-
-                <div class="popular-tags">
-                    <span>جستجوهای پرتکرار:</span>
-                    <button type="button" class="tag-btn" data-Word="فروشگاهی">قالب فروشگاهی</button>
-                    <button type="button" class="tag-btn" data-Word="هوش مصنوعی">هوش مصنوعی</button>
-                    <button type="button" class="tag-btn" data-Word="المنتور">قالب المنتوری</button>
-                    <button type="button" class="tag-btn" data-Word="شرکتی">قالب شرکتی</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ۴. نوار ویژگی‌ها -->
-    <section class="features">
-        <div class="container features-grid">
-            <div class="feature-box">
-                <i class="fas fa-shield-alt"></i>
-                <div>
-                    <h4>ضمانت اورجینال بودن</h4>
-                    <span>تست شده و بدون کد مخرب</span>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-sync"></i>
-                <div>
-                    <h4>آپدیت همیشگی و رایگان</h4>
-                    <span>دسترسی آنی به نسخه‌های جدید</span>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-headset"></i>
-                <div>
-                    <h4>پشتیبانی سریع ۲۴ ساعته</h4>
-                    <span>پاسخگویی تخصصی به سوالات</span>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-mobile-alt"></i>
-                <div>
-                    <h4>کاملاً ریسپانسیو</h4>
-                    <span>سازگار با انواع موبایل و تبلت</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ۵. بخش محصولات -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-head">
-                <h2>جدیدترین محصولات <span>نکسرا</span></h2>
-                <div class="filter-group">
-                    <button class="filter-btn active" data-cat="all">همه</button>
-                    <button class="filter-btn" data-cat="wp">قالب وردپرس</button>
-                    <button class="filter-btn" data-cat="html">قالب HTML</button>
-                    <button class="filter-btn" data-cat="plugin">افزونه و اسکریپت</button>
-                </div>
-            </div>
-
-            <div class="products-grid">
-                <!-- کارت ۱ -->
-                <div class="card" data-cat="wp" data-title="قالب فروشگاهی نکس شاپ وردپرس المنتور">
-                    <div class="card-thumb">
-                        <img src="header.png" alt="قالب فروشگاهی">
-                        <span class="card-badge">پرفروش</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-cat">
-                            <span>قالب وردپرس</span>
-                            <span class="stars"><i class="fas fa-star"></i> ۴.۹</span>
-                        </div>
-                        <h3 class="card-title">قالب فروشگاهی حرفه‌ای نکس‌شاپ (سازگار با المنتور)</h3>
-                        <div class="card-footer">
-                            <div class="price-box">
-                                <span class="old">۹۸۰,۰۰۰ تومان</span>
-                                <span class="new">۴۹۰,۰۰۰ تومان</span>
-                            </div>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i> خرید</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- کارت ۲ -->
-                <div class="card" data-cat="html" data-title="قالب شرکتی و استارتاپی هوش مصنوعی HTML">
-                    <div class="card-thumb">
-                        <img src="header.png" alt="قالب هوش مصنوعی">
-                        <span class="card-badge green">جدید</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-cat">
-                            <span>قالب HTML</span>
-                            <span class="stars"><i class="fas fa-star"></i> ۵.۰</span>
-                        </div>
-                        <h3 class="card-title">قالب HTML شرکتی و هوش مصنوعی Nexra AI</h3>
-                        <div class="card-footer">
-                            <div class="price-box">
-                                <span class="old">۶۵۰,۰۰۰ تومان</span>
-                                <span class="new">۳۲۰,۰۰۰ تومان</span>
-                            </div>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i> خرید</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- کارت ۳ -->
-                <div class="card" data-cat="plugin" data-title="افزونه المنتور پرو و بهینه ساز سرعت راکت">
-                    <div class="card-thumb">
-                        <img src="header.png" alt="افزونه وردپرس">
-                        <span class="card-badge purple">ویژه</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-cat">
-                            <span>افزونه وردپرس</span>
-                            <span class="stars"><i class="fas fa-star"></i> ۴.۸</span>
-                        </div>
-                        <h3 class="card-title">پکیج افزونه المنتور پرو + افزایش سرعت سایت</h3>
-                        <div class="card-footer">
-                            <div class="price-box">
-                                <span class="old">۵۰۰,۰۰۰ تومان</span>
-                                <span class="new">۲۵۰,۰۰۰ تومان</span>
-                            </div>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i> خرید</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ۶. فوتر -->
-    <footer class="footer">
-        <div class="container">
-            <p>تمامی حقوق برای مارکت‌پلیس <strong>نکسرا (Nexra)</strong> محفوظ است © ۱۴۰۵</p>
-        </div>
-    </footer>
-
-    <!-- اسکریپت‌های تعاملی -->
-    <script>
-        // ۱. باز و بسته کردن منوی موبایل
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-
-        // ۲. تبدیل اعداد انگلیسی به فارسی
-        const toFa = n => String(n).padStart(2, '0').replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
-
-        // ۳. تایمر شمارش معکوس
-        let sec = 13 * 3600 + 35 * 60 + 29;
-        setInterval(() => {
-            if (sec <= 0) return;
-            sec--;
-            document.getElementById('hours').textContent = toFa(Math.floor(sec / 3600));
-            document.getElementById('minutes').textContent = toFa(Math.floor((sec % 3600) / 60));
-            document.getElementById('seconds').textContent = toFa(sec % 60);
-        }, 1000);
-
-        // ۴. فیلتر دسته‌بندی محصولات
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const cat = btn.getAttribute('data-cat');
-                cards.forEach(c => {
-                    c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? 'block' : 'none';
-                });
-            });
-        });
-
-        // ۵. جستجو در محصولات
-        const searchForm = document.getElementById('searchForm');
-        const searchInput = document.getElementById('searchInput');
-        const tagBtns = document.querySelectorAll('.tag-btn');
-
-        function doSearch(word) {
-            cards.forEach(c => {
-                c.style.display = c.getAttribute('data-title').includes(word.trim()) ? 'block' : 'none';
-            });
-            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        .browser-mockup:hover {
+            transform: scale(1.03);
+            border-color: var(--accent);
         }
 
-        searchForm.addEventListener('submit', e => {
-            e.preventDefault();
-            doSearch(searchInput.value);
-        });
+        .browser-bar {
+            background: #161f36;
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            direction: ltr;
+        }
 
-        tagBtns.forEach(t => {
-            t.addEventListener('click', () => {
-                const w = t.getAttribute('data-Word');
-                searchInput.value = w;
-                doSearch(w);
-            });
-        });
+        .browser-dots {
+            display: flex;
+            gap: 6px;
+        }
 
-        // ۶. افزودن به سبد خرید
-        let count = 0;
-        const cartCount = document.getElementById('cartCount');
-        document.querySelectorAll('.buy-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                count++;
-                cartCount.textContent = toFa(count);
-                btn.innerHTML = '<i class="fas fa-check"></i> اضافه شد';
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-cart-plus"></i> خرید';
-                }, 1500);
-            });
-        });
-    </script>
-</body>
-</html>
+        .browser-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        .browser-url {
+            background: #0b0f1d;
+            color: #34d399;
+            font-size: 0.75rem;
+            padding: 3px 14px;
+            border-radius: 6px;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .browser-screen {
+            position: relative;
+            height: 230px;
+            background: #1e293b;
+            overflow: hidden;
+        }
+
+        .browser-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.6s ease;
+        }
+
+        .browser-mockup:hover .browser-screen img {
+            transform: scale(1.06);
+        }
+
+        .browser-overlay-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(6, 9, 19, 0.85);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- ۷. استایل پنجره‌های پاپ‌آپ (Modals) --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal-box {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.15);
+            width: 100%;
+            max-width: 440px;
+            border-radius: 20px;
+            padding: 28px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+            animation: popIn 0.25s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border

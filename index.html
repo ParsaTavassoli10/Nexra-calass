@@ -162,10 +162,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
-            transition: 0.2s;
         }
-
-        .cart-btn:hover { border-color: var(--accent); }
 
         .cart-count {
             position: absolute;
@@ -271,13 +268,7 @@
             margin-bottom: 14px;
         }
 
-        .hero-inner h1 {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
+        .hero-inner h1 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; color: #fff; }
         .hero-inner h1 span { color: #34d399; }
         .hero-inner p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 26px; }
 
@@ -490,187 +481,222 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: 0.2s;
         }
 
         .buy-btn:hover { background: var(--accent); color: #060913; }
 
-        /* --- ۶. بخش تبلیغاتی ویژه (بنر مستر املاکی) --- */
-        .promo-banner-section {
-            padding: 35px 0 50px;
+        /* ========================================================
+           ۶. بخش تبلیغات پایین صفحه (بنر بزرگ و عکس سایت mramlaki.ir)
+           ======================================================== */
+        .ads-section {
+            padding: 40px 0 60px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            margin-top: 30px;
         }
 
-        .ad-showcase-card {
-            background: linear-gradient(135deg, #131b31 0%, #1e1b4b 55%, #064e3b 100%);
-            border: 1px solid rgba(16, 185, 129, 0.35);
-            border-radius: 24px;
-            padding: 32px;
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 32px;
+        .ads-header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 20px;
         }
 
-        .ad-badge {
+        .ads-header h3 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #fbbf24;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ads-tag {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            padding: 3px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .ad-banner-box {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 28px;
+            background: linear-gradient(135deg, #111827 0%, #1e1b4b 60%, #064e3b 100%);
+            border: 2px solid #10b981;
+            border-radius: 22px;
+            padding: 26px;
+            align-items: center;
+            box-shadow: 0 20px 45px rgba(16, 185, 129, 0.18);
+            position: relative;
+        }
+
+        .ad-info {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .ad-label {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(251, 191, 36, 0.15);
-            color: #fbbf24;
-            border: 1px solid rgba(251, 191, 36, 0.4);
+            background: #fbbf24;
+            color: #060913;
+            font-weight: 900;
+            font-size: 0.78rem;
             padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            margin-bottom: 12px;
+            width: fit-content;
         }
 
-        .ad-content h3 {
-            font-size: 1.55rem;
+        .ad-info h4 {
+            font-size: 1.5rem;
             font-weight: 900;
             color: #fff;
-            margin-bottom: 10px;
             line-height: 1.4;
         }
 
-        .ad-content h3 span {
+        .ad-info h4 span {
             color: #34d399;
         }
 
-        .ad-content p {
+        .ad-info p {
             color: #cbd5e1;
-            font-size: 0.94rem;
-            margin-bottom: 22px;
+            font-size: 0.92rem;
             line-height: 1.8;
         }
 
-        .ad-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 24px;
-            font-size: 0.82rem;
-            color: #a5b4fc;
-        }
-
-        .ad-features span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255, 255, 255, 0.06);
-            padding: 5px 12px;
+        .ad-link-url {
+            direction: ltr;
+            text-align: left;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 14px;
             border-radius: 10px;
+            font-family: monospace;
+            color: #34d399;
+            font-size: 0.9rem;
+            display: inline-block;
+            width: fit-content;
         }
 
-        .ad-cta-btn {
+        .ad-btn-enter {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            background: var(--accent);
+            background: #10b981;
             color: #060913;
             font-weight: 900;
-            font-size: 0.95rem;
-            padding: 13px 26px;
+            font-size: 1rem;
+            padding: 14px 28px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
-            transition: transform 0.25s ease, background 0.25s ease;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+            margin-top: 6px;
         }
 
-        .ad-cta-btn:hover {
+        .ad-btn-enter:hover {
             background: #34d399;
             transform: translateY(-3px);
         }
 
-        /* قاب مرورگر برای نمایش عکس صفحه mramlaki.ir */
-        .browser-mockup {
-            background: #0b0f1d;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+        /* کادر نمایش تصویر و پیش‌نمایش زنده صفحه mramlaki.ir */
+        .ad-preview-card {
+            display: block;
+            background: #090d16;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.65);
-            transition: transform 0.35s ease;
-            display: block;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
         }
 
-        .browser-mockup:hover {
-            transform: scale(1.03);
-            border-color: var(--accent);
+        .ad-preview-card:hover {
+            border-color: #fbbf24;
         }
 
-        .browser-bar {
-            background: #161f36;
+        .preview-top-bar {
+            background: #1e293b;
             padding: 8px 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             direction: ltr;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .browser-dots {
+        .preview-dots {
             display: flex;
             gap: 6px;
         }
 
-        .browser-dots span {
+        .preview-dots i {
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            display: inline-block;
         }
 
-        .dot-red { background: #ef4444; }
-        .dot-yellow { background: #f59e0b; }
-        .dot-green { background: #10b981; }
-
-        .browser-url {
-            background: #0b0f1d;
-            color: #34d399;
-            font-size: 0.75rem;
+        .preview-address {
+            background: #0f172a;
+            color: #38bdf8;
+            font-size: 0.78rem;
             padding: 3px 14px;
             border-radius: 6px;
             font-family: monospace;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
-        .browser-screen {
+        .preview-window {
             position: relative;
-            height: 230px;
-            background: #1e293b;
+            width: 100%;
+            height: 270px;
+            background: #0f172a;
             overflow: hidden;
         }
 
-        .browser-screen img {
+        /* تصویر اسکرین‌شات خودکار + آی‌فریم زنده سایت */
+        .preview-window img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
-            transition: transform 0.6s ease;
+            object-position: top;
         }
 
-        .browser-mockup:hover .browser-screen img {
-            transform: scale(1.06);
-        }
-
-        .browser-overlay-badge {
+        .preview-window iframe {
             position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(6, 9, 19, 0.85);
-            backdrop-filter: blur(6px);
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            border: 1px solid rgba(255,255,255,0.15);
+            top: 0;
+            left: 0;
+            width: 133.33%;
+            height: 133.33%;
+            transform: scale(0.75);
+            transform-origin: top left;
+            border: none;
+            pointer-events: none; /* تا کلیک روی کادر مستقیم لینک را باز کند */
+            background: #fff;
+        }
+
+        .click-layer {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(6, 9, 19, 0.9) 100%);
             display: flex;
-            align-items: center;
-            gap: 6px;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 16px;
+            z-index: 5;
+        }
+
+        .click-layer span {
+            background: #fbbf24;
+            color: #060913;
+            font-weight: 900;
+            font-size: 0.85rem;
+            padding: 6px 18px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
         }
 
         /* --- ۷. استایل پنجره‌های پاپ‌آپ (Modals) --- */
@@ -686,32 +712,4 @@
             padding: 20px;
         }
 
-        .modal-overlay.active { display: flex; }
-
-        .modal-box {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.15);
-            width: 100%;
-            max-width: 440px;
-            border-radius: 20px;
-            padding: 28px;
-            position: relative;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
-            animation: popIn 0.25s ease;
-        }
-
-        @keyframes popIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 18px;
-            left: 18px;
-            background: rgba(255,255,255,0.08);
-            border: none;
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            border
+        .modal-overlay.
